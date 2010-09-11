@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Mando.ac</path>
+
+<animation>
+<type>material</type>
+<object-name>Mando</object-name>
+<object-name>Tubo</object-name>
+<emission>
+    <red>0.3</red>
+    <green>0.25</green>
+    <blue>0.2</blue>
+<factor-prop>controls/lighting/panel-norm[0]</factor-prop>
+ </emission>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>Mando</object-name>
+  <property>controls/flight/aileron</property>
+  <factor>-45.0</factor>
+    <center>
+      <x-m>-0.0</x-m>
+      <y-m>-0.524624</y-m>
+      <z-m>0.677437</z-m>
+    </center>
+    <axis>
+      <x>0.1</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+ </animation>
+
+<animation>
+  <type>translate</type>
+  <object-name>Mando</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-0.1</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+  <animation>
+  <type>translate</type>
+  <object-name>Tubo</object-name>
+  <property>controls/flight/elevator</property>
+  <factor>-0.1</factor>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+<!-- Yokes On/Off -->
+
+<animation>
+<type>select</type>
+<condition>
+<property>/sim/yokes-visible</property>
+</condition>
+<object-name>Mando</object-name>
+<object-name>Tubo</object-name>
+</animation>
+
+</PropertyList>

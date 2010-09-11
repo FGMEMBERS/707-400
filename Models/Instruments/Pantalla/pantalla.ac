@@ -1,0 +1,42 @@
+AC3Db
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 16  trans 0
+OBJECT world
+kids 2
+OBJECT poly
+name "rect"
+loc 0.010295 -0.000626232 0.000543842
+texture "Banner Flightgear.rgb"
+crease 45.000000
+numvert 4
+1.86265e-008 0.0451366 0.0604735
+3.72529e-009 0.0451366 -0.0604736
+-2.04891e-008 -0.0451367 -0.0604736
+-4.65661e-009 -0.0451367 0.0604735
+numsurf 1
+SURF 0x30
+mat 0
+refs 4
+0 0 1
+1 1 1
+2 1 0
+3 0 0
+kids 0
+OBJECT poly
+name "rect_2"
+loc 0.010612 0.000454505 -4.99189e-007
+texture "mfd-bezel.rgb"
+crease 45.000000
+numvert 4
+1.86265e-009 0.0521822 -0.0679736
+-1.58325e-008 0.0521822 0.0679736
+-6.51926e-009 -0.0521821 0.0679736
+1.11759e-008 -0.0521821 -0.0679736
+numsurf 1
+SURF 0x30
+mat 0
+refs 4
+3 0 1
+2 1 1
+1 1 0
+0 0 0
+kids 0
