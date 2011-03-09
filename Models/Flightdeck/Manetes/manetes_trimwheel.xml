@@ -1,0 +1,376 @@
+<?xml version="1.0" ?> 
+  <PropertyList> 
+  
+    <path>manetes_trim.ac</path> 
+   
+<!-- ####################################################################### -->
+<!-- Object set -->
+<!-- ####################################################################### -->
+   
+    <animation>
+    <name>manete_full</name>
+      <object-name>Throttle0</object-name>
+      <object-name>Throttle1</object-name>
+      <object-name>Throttle2</object-name>
+      <object-name>Throttle3</object-name>
+      <object-name>Rev_Throttle0</object-name>
+      <object-name>Rev_Throttle1</object-name>
+      <object-name>Rev_Throttle2</object-name>
+      <object-name>Rev_Throttle3</object-name>
+    </animation>  
+
+    <animation>
+    <name>manete_comp_0</name>
+      <object-name>Rev_Throttle0</object-name>
+      <object-name>Throttle0</object-name>
+    </animation>  
+
+    <animation>
+    <name>manete_comp_1</name>
+      <object-name>Rev_Throttle1</object-name>
+      <object-name>Throttle1</object-name>
+    </animation>  
+
+    <animation>
+    <name>manete_comp_2</name>
+      <object-name>Rev_Throttle2</object-name>
+      <object-name>Throttle2</object-name>
+    </animation>  
+
+    <animation>
+    <name>manete_comp_3</name>
+      <object-name>Rev_Throttle3</object-name>
+      <object-name>Throttle3</object-name>
+    </animation>  
+
+<!-- ####################################################################### -->
+<!-- Animations -->
+<!-- ####################################################################### -->
+
+    <animation>
+    <type>rotate</type>
+      <object-name>trim_disk</object-name>
+      <property>controls/flight/elevator-trim</property>
+      <factor>18000</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6368</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487173</z-m>
+      </center>
+    </animation>  
+
+    <!-- Throttle -->
+    <animation>
+    <type>rotate</type>
+      <object-name>manete_comp_0</object-name>
+      <property>controls/engines/engine[0]/throttle</property>
+      <factor>-35</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+    <animation>
+    <type>rotate</type>
+      <object-name>manete_comp_1</object-name>
+      <property>controls/engines/engine[1]/throttle</property>
+      <factor>-35</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+    <animation>
+    <type>rotate</type>
+      <object-name>manete_comp_2</object-name>
+      <property>controls/engines/engine[2]/throttle</property>
+      <factor>-35</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+    <animation>
+    <type>rotate</type>
+      <object-name>manete_comp_3</object-name>
+      <property>controls/engines/engine[3]/throttle</property>
+      <factor>-35</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+    
+<!-- Flaps -->
+    <animation>
+    <type>rotate</type>
+      <object-name>FlapLever</object-name>
+      <property>controls/flight/flaps</property>
+      <factor>45</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+<!-- Speedbrake -->
+    <animation>
+    <type>rotate</type>
+      <object-name>SpeedbrakeLever</object-name>
+      <property>controls/flight/speedbrake</property>
+      <factor>-45</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+<!-- Spoilers -->
+    <animation>
+    <type>rotate</type>
+      <object-name>SpoilerLever</object-name>
+      <property>controls/flight/spoilers</property>
+      <factor>-45</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+
+<!-- Parking brake -->
+
+    <animation>
+    <type>translate</type>
+      <object-name>ParkingLever</object-name>
+      <property>controls/gear/brake-parking</property>
+      <factor>0.01</factor>
+	  <axis>
+	     <x1-m> -18.5598</x1-m>
+	     <y1-m>-0.0927236</y1-m>
+	     <z1-m>0.572163</z1-m>
+	     <x2-m> -18.6133</x2-m>
+	     <y2-m>-0.0927237</y2-m>
+	     <z2-m>0.518642</z2-m>
+	  </axis>
+    </animation>  
+
+
+<!-- Starter -->
+    <animation>
+    <type>rotate</type>
+      <object-name>Start_0</object-name>
+      <property>controls/engines/engine[0]/starter</property>
+      <factor>-22.5</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+    <animation>
+    <type>rotate</type>
+      <object-name>Start_1</object-name>
+      <property>controls/engines/engine[1]/starter</property>
+      <factor>-22.5</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+    <animation>
+    <type>rotate</type>
+      <object-name>Start_2</object-name>
+      <property>controls/engines/engine[2]/starter</property>
+      <factor>-22.5</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+    <animation>
+    <type>rotate</type>
+      <object-name>Start_3</object-name>
+      <property>controls/engines/engine[3]/starter</property>
+      <factor>-22.5</factor>
+      <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+      </axis>
+      <center>
+        <x-m>-18.6363</x-m>
+        <y-m>0.0</y-m>
+        <z-m>0.487184</z-m>
+      </center>
+    </animation>  
+
+
+<!-- Lampadas -->
+
+<animation>
+        <type>material</type>
+        <object-name>metalring_L</object-name>
+        <object-name>offlamp_L</object-name>
+ <emission>
+	 <red>0.5</red>
+	 <green>0.45</green>
+	 <blue>0.42</blue>
+	 <factor-prop>controls/lighting/panel-norm</factor-prop>	
+ </emission>
+</animation>
+
+<animation>
+        <type>select</type>
+      <object-name>onlamp_L</object-name>
+        <condition>
+	      <greater-than>
+	        <property>controls/gear/brake-parking</property>
+	        <value>0</value>
+	      </greater-than>
+        </condition>
+</animation>  
+
+<animation>
+        <type>select</type>
+      <object-name>offlamp_L</object-name>
+        <condition>
+	      <equals>
+	        <property>controls/gear/brake-parking</property>
+	        <value>0</value>
+	      </equals>
+        </condition>
+</animation>  
+
+
+<animation>
+        <type>material</type>
+        <object-name>metalring_R</object-name>
+        <object-name>offlamp_R</object-name>
+ <emission>
+	 <red>0.5</red>
+	 <green>0.45</green>
+	 <blue>0.42</blue>
+	 <factor-prop>controls/lighting/panel-norm</factor-prop>	
+ </emission>
+</animation>
+
+<animation>
+        <type>select</type>
+      <object-name>offlamp_R</object-name>
+        <condition>
+	      <equals>
+	        <property>controls/flight/flaps</property>
+	        <value>0</value>
+	      </equals>
+        </condition>
+</animation>  
+
+<animation>
+        <type>select</type>
+      <object-name>onlamp_R</object-name>
+        <condition>
+	      <greater-than>
+	        <property>controls/flight/flaps</property>
+	        <value>0</value>
+	      </greater-than>
+        </condition>
+</animation>  
+		
+		
+
+
+
+<!-- Iluminacao -->
+
+	
+<animation>
+      <type>material</type>
+      <object-name>trim_disk</object-name>
+      <object-name>manete_full</object-name>
+      <emission>
+            <red>0.3</red>
+            <green>0.25</green>
+            <blue>0.22</blue>
+            <factor-prop>controls/lighting/panel-norm</factor-prop>
+      </emission>
+</animation>
+
+<!-- *** LoD *** -->
+<animation>
+      <type>range</type>
+      <min-m>0</min-m>
+      <max-m>5</max-m>
+</animation>
+ 
+</PropertyList>

@@ -1,0 +1,29 @@
+AC3Db
+MATERIAL "ac3dmat1" rgb 1 1 1  amb 0.2 0.2 0.2  emis 0 0 0  spec 0.2 0.2 0.2  shi 128  trans 0
+OBJECT world
+kids 1
+OBJECT poly
+name "rect"
+loc 0 0 0.0684997
+texture "overhead_map.png"
+crease 45.000000
+numvert 7
+0 -4.82661 -2.65188
+0 -4.82661 2.51488
+0 -4.82661 -0.0684997
+0 -4.00306 -5.15267
+0 -4.00306 5.01567
+0 5.11149 5.01567
+0 5.11149 -5.15267
+numsurf 1
+SURF 0x30
+mat 0
+refs 7
+6 1 1
+5 0 1
+4 0 0.103633
+1 0.245938 0.0226423
+2 0.5 0.0226423
+0 0.754062 0.0226423
+3 1 0.103633
+kids 0

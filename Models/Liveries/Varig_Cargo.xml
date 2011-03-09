@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">Varig Cargo</name>
-            <texture>Varig_Cargo.rgb</texture>
+            <texture>Varig_Cargo.png</texture>
         </livery>
     </model>
 </sim>

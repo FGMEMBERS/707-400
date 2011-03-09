@@ -61,6 +61,17 @@
   </animation>
  
 
+<animation>
+        <type>select</type>
+      <object-name>windowsframe</object-name>
+        <condition>
+	      <equals>
+	        <property>sim/current-view/internal</property>
+	        <value>false</value>
+	      </equals>
+        </condition>
+</animation>  
+
  <animation>
   <type>rotate</type>
   <object-name>nosegeartire</object-name>
@@ -1500,6 +1511,7 @@
  </model>
  
  <!-- Efeito de luz landing e taxi -->
+ <!--
  <model>
   <path>Aircraft/707-400/Models/Lights/Projection/lamp_ilumination.xml</path>
   <offsets>
@@ -1509,6 +1521,7 @@
    <pitch-deg>0</pitch-deg>
   </offsets>
  </model>
+-->
 
  <!-- END LIGHTS -->
 
@@ -1535,18 +1548,17 @@
   </offsets>
  </model>
 
-
- <!-- Interior
+ <!-- Flightdeck -->
  <model>
-  <name>Interior</name>
-  <path>Aircraft/707-400/Models/Interior/interior.xml</path>
+  <name>Flightdeck</name>
+  <path>Aircraft/707-400/Models/Flightdeck/flightdeck.xml</path>
   <offsets>
    <x-m>0.0</x-m>
    <y-m>0.0</y-m>
    <z-m>0.0</z-m>
   </offsets>
  </model>
- -->
+
  <!-- ############# -->
  <!-- ## Effects ## -->
  <!-- ############# -->
@@ -1648,25 +1660,17 @@
 	</model>
  -->
  
-<!-- Iluminacao noturna -->
-	<!-- janelas dos PAX -->
-    <animation>
-        <type>select</type>
-        <object-name>janelas</object-name>
-        <condition>
-                <greater-than>
-                    <property>sim/time/sun-angle-rad</property>
-                    <value>1.55</value>
-                </greater-than>
-        </condition>
-    </animation>
-
     
   <!-- Sombras OSG -->
-  <model>
+<model>
     <name>shadowOSG</name>
     <path>Aircraft/707-400/Models/Shadow/shadow.xml</path>
-  </model>
+		<offsets>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>4.75</z-m>
+		</offsets>
+</model>
 
   <animation>
     <type>select</type>
@@ -1713,13 +1717,6 @@
    <z>0</z>
   </axis>
  </animation>
- 
- <!--
- 1.01357	-2.50559	3.23771
-1.01357	-2.50559	3.68349
-1.01357	-2.50559	2.74159
-1.01357	-2.50559	2.29581
- -->
 
  <animation>
   <type>spin</type>
@@ -1789,7 +1786,37 @@
    <z>0</z>
   </axis>
  </animation>
-
+		 
+  <animation>
+    <type>noshadow</type>
+    <object-name>windowsnight</object-name>
+  </animation>
+  
+	<!-- Efeito das luzes a noite -->
+	<!-- Iluminacao noturna -->
+	<!-- janelas dos PAX -->
+    <animation>
+        <type>select</type>
+        <object-name>windowsnight</object-name>
+        <condition>
+                <greater-than>
+                    <property>sim/time/sun-angle-rad</property>
+                    <value>1.55</value>
+                </greater-than>
+        </condition>
+    </animation>
+<!--
+    <animation>
+        <type>select</type>
+        <object-name>windowsnight</object-name>
+        <condition>
+                <less-than>
+                    <property>sim/time/sun-angle-rad</property>
+                    <value>1.55</value>
+                </less-than>
+        </condition>
+    </animation>
+-->
 </PropertyList>
 
 

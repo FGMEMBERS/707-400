@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+	<path>knob-light-lever.ac</path>
+	
+<!-- Objetos
+
+avanco_left_more
+avanco_left
+avanco_right_more
+avanco_right
+knob_black
+-->
+
+<animation>
+      <type>rotate</type>
+      <object-name>knob_black</object-name>
+      <property>controls/lighting/panel-norm</property>
+      <interpolation>
+            <entry>
+                  <ind>0.0</ind>
+                  <dep>30</dep>
+            </entry>
+            <entry>
+                  <ind>1.0</ind>
+                  <dep>330</dep>
+            </entry>
+      </interpolation>
+      <center>
+            <x-m> 0.0</x-m>
+            <y-m> 0.0</y-m>
+            <z-m> 0.0</z-m>
+      </center>
+      <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+      </axis>
+</animation>
+
+<animation>
+      <type>pick</type>
+      <object-name>avanco_left</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>true</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                  <command>property-adjust</command>
+                  <property>controls/lighting/panel-norm[0]</property>
+                  <step>-0.05</step>
+                  <min>0</min>
+                  <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+      </action>
+</animation>
+
+<animation>
+      <type>pick</type>
+      <object-name>avanco_left_more</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                  <command>property-adjust</command>
+                  <property>controls/lighting/panel-norm[0]</property>
+                  <step>-0.1</step>
+                  <min>0</min>
+                  <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+      </action>
+</animation>
+
+<animation>
+      <type>pick</type>
+      <object-name>avanco_right</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                  <command>property-adjust</command>
+                  <property>controls/lighting/panel-norm[0]</property>
+                  <step> 0.05</step>
+                  <min>0</min>
+                  <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+      </action>
+</animation>
+
+<animation>
+      <type>pick</type>
+      <object-name>avanco_right_more</object-name>
+      <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <interval-sec>0.2</interval-sec>
+            <binding>
+                  <command>property-adjust</command>
+                  <property>controls/lighting/panel-norm[0]</property>
+                  <step> 0.1</step>
+                  <min>0</min>
+                  <max>1</max>
+                <wrap>false</wrap>
+            </binding>
+      </action>
+</animation>
+
+<animation>
+        <type>material</type>
+        <object-name>knob_black</object-name>
+        <emission>
+            <red>0.3</red>
+            <green>0.25</green>
+            <blue>0.2</blue>
+            <factor-prop>controls/lighting/panel-norm[0]</factor-prop>
+        </emission>
+</animation>
+
+<animation>
+      <object-name>avanco_left_more</object-name>
+      <object-name>avanco_left</object-name>
+      <object-name>avanco_right_more</object-name>
+      <object-name>avanco_right</object-name>
+      <type>noshadow</type>
+</animation>
+
+<animation>
+      <type>range</type>
+      <min-m>0</min-m>
+      <max-m>10</max-m>
+</animation>
+
+</PropertyList>
+

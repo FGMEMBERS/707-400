@@ -11,14 +11,41 @@ MATERIAL "_Safet03" rgb 0.960784 0.745098 0.294118  amb 0 0 0  emis 0 0 0  spec 
 MATERIAL "_Safety_" rgb 0.835294 0.960784 0.913725  amb 0 0 0  emis 0 0 0  spec 0.329412 0.329412 0.329412  shi 128  trans 0.5
 MATERIAL "_SlateGr" rgb 0.129412 0.14902 0.168627  amb 0 0 0  emis 0 0 0  spec 0.329412 0.329412 0.329412  shi 128  trans 0
 MATERIAL "WhiteTrac" rgb 0.992 0.992 0.984  amb 0 0 0  emis 0 0 0  spec 0.518 0.518 0.51  shi 128  trans 0
-MATERIAL "DefaultWhite.001" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "DefaultWhite" rgb 1 1 1  amb 1 1 1  emis 0 0 0  spec 0.5 0.5 0.5  shi 64  trans 0
+MATERIAL "RedLight" rgb 1 0.0392 0.0392  amb 0.4 0.4 0.4  emis 1 1 1  spec 0.2 0.2 0.2  shi 128  trans 0
 OBJECT world
-kids 8
+kids 12
+OBJECT poly
+name "Light"
+loc -7.87411 2.9431 -0.536452
+data 4
+Mesh
+texture "RedLight.png"
+crease 30.000000
+numvert 4
+-0.26225 0.26225 1.0729
+0.26225 -0.26225 1.0729
+-0.26225 -0.26225 1.0729
+0.26225 0.26225 1.0729
+numsurf 2
+SURF 0x30
+mat 13
+refs 3
+2 0.0013 0.0057
+1 -0.9977 0.0057
+0 0.0013 1.0048
+SURF 0x30
+mat 13
+refs 3
+3 -0.9977 1.0048
+0 0.0013 1.0048
+1 -0.9977 0.0057
+kids 0
 OBJECT poly
 name "TowbarWheelL"
 data 8
 Mesh.002
-texture "Military.png"
+texture "trator.png"
 crease 30.000000
 numvert 134
 -1.81616 0.090932 0.417632
@@ -1637,7 +1664,7 @@ OBJECT poly
 name "TowbarWheelR"
 data 8
 Mesh.002
-texture "Military.png"
+texture "trator.png"
 crease 30.000000
 numvert 134
 -1.71156 0.149632 -0.466968
@@ -8490,7 +8517,7 @@ refs 3
 474 0.314945 0.558114
 kids 0
 OBJECT poly
-name "cylinder"
+name "rodas_dianteiras"
 loc 4.21541 -2.38125 0
 texture "trator.png"
 crease 45.000000
@@ -59593,7 +59620,7 @@ refs 3
 119 -12.1556 17.8491
 kids 0
 OBJECT poly
-name "cylinder"
+name "rodas_traseiras"
 loc -4.61273 -1.9076 0
 texture "trator.png"
 crease 45.000000
@@ -62699,4 +62726,82 @@ refs 3
 129 0.225867 0.594821
 128 0.250638 0.594821
 123 0.225867 0.588717
+kids 0
+OBJECT poly
+name "Light"
+loc -7.87411 2.9431 -0.536452
+data 4
+Mesh
+texture "RedLight.png"
+crease 30.000000
+numvert 4
+0.26225 0.26225 1.0729
+-0.26225 -0.26225 1.0729
+0.26225 -0.26225 1.0729
+-0.26225 0.26225 1.0729
+numsurf 2
+SURF 0x30
+mat 13
+refs 3
+0 -0.9977 1.0048
+3 0.0013 1.0048
+2 -0.9977 0.0057
+SURF 0x30
+mat 13
+refs 3
+1 0.0013 0.0057
+2 -0.9977 0.0057
+3 0.0013 1.0048
+kids 0
+OBJECT poly
+name "Light"
+loc -7.87411 2.9431 -0.536452
+data 4
+Mesh
+texture "RedLight.png"
+crease 30.000000
+numvert 4
+-0.26225 0.26225 0
+0.26225 -0.26225 0
+-0.26225 -0.26225 0
+0.26225 0.26225 0
+numsurf 2
+SURF 0x30
+mat 13
+refs 3
+0 0.0013 1.0048
+1 -0.9977 0.0057
+2 0.0013 0.0057
+SURF 0x30
+mat 13
+refs 3
+1 -0.9977 0.0057
+0 0.0013 1.0048
+3 -0.9977 1.0048
+kids 0
+OBJECT poly
+name "Light"
+loc -7.87411 2.9431 -0.536452
+data 4
+Mesh
+texture "RedLight.png"
+crease 30.000000
+numvert 4
+0.26225 0.26225 0
+-0.26225 -0.26225 0
+0.26225 -0.26225 0
+-0.26225 0.26225 0
+numsurf 2
+SURF 0x30
+mat 13
+refs 3
+2 -0.9977 0.0057
+3 0.0013 1.0048
+0 -0.9977 1.0048
+SURF 0x30
+mat 13
+refs 3
+3 0.0013 1.0048
+2 -0.9977 0.0057
+1 0.0013 0.0057
 kids 0

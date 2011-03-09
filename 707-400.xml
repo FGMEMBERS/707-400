@@ -76,7 +76,7 @@
  </mass_balance>
 
  <ground_reactions>
-
+<!--
   <contact type="BOGEY" name="NOSE">
    <location unit="IN">
      <x> 226.98 </x>
@@ -91,6 +91,33 @@
    <max_steer unit="DEG"> 30.00 </max_steer>
    <brake_group>NONE</brake_group>
    <retractable>1</retractable>
+ </contact>
+-->
+
+  <contact type="BOGEY" name="NOSE">
+   <location unit="IN">
+     <x> 226.98 </x>
+     <y>   0.00 </y>
+     <z> -209.52 </z>
+   </location>
+   <static_friction>  0.80 </static_friction>
+   <dynamic_friction> 0.50 </dynamic_friction>
+   <rolling_friction> 0.02 </rolling_friction>
+   <spring_coeff unit="LBS/FT">      100080.00 </spring_coeff>
+   <damping_coeff unit="LBS/FT/SEC"> 33360.00 </damping_coeff>
+            <damping_coeff_rebound unit="LBS/FT/SEC">20000</damping_coeff_rebound>
+            <relaxation_velocity>
+              <rolling unit="FT/SEC">0.7</rolling>
+              <side unit="FT/SEC">0.7</side>
+            </relaxation_velocity>
+            <force_lag_filter>
+              <rolling> 120.0 </rolling>
+              <side>120.0 </side>
+            </force_lag_filter>
+            <wheel_slip_filter> 120.0 </wheel_slip_filter>
+            <max_steer unit="DEG"> 35 </max_steer>
+            <brake_group> NONE </brake_group>
+            <retractable>1</retractable>
  </contact>
 
   <contact type="BOGEY" name="LEFT_MAIN">
@@ -165,7 +192,12 @@
       <yaw>   0.00 </yaw>
     </orient>
     <feed>0</feed>
+    <feed>1</feed>
+    <feed>2</feed>
+    <feed>3</feed>
     <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
     <thruster file="direct">
      <location unit="IN">
        <x> 800.30 </x>
@@ -191,8 +223,13 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+    <feed>0</feed>
     <feed>1</feed>
+    <feed>2</feed>
+    <feed>3</feed>
     <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
     <thruster file="direct">
      <location unit="IN">
        <x> 960.30 </x>
@@ -218,8 +255,13 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+    <feed>0</feed>
+    <feed>1</feed>
     <feed>2</feed>
+    <feed>3</feed>
     <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
     <thruster file="direct">
      <location unit="IN">
        <x> 960.30 </x>
@@ -245,8 +287,13 @@
       <roll>   0.00 </roll>
       <yaw>   0.00 </yaw>
     </orient>
+    <feed>0</feed>
+    <feed>1</feed>
+    <feed>2</feed>
     <feed>3</feed>
     <feed>4</feed>
+    <feed>5</feed>
+    <feed>6</feed>
     <thruster file="direct">
      <location unit="IN">
        <x> 800.30 </x>
@@ -325,7 +372,7 @@
      <contents unit="LBS">  1000.00 </contents>
   </tank>
   
-  <tank type="FUEL" number="3">
+  <tank type="FUEL" number="5">
      <name>Left Reserve tank</name>
      <location unit="IN">
        <x> 800.30 </x>
@@ -336,7 +383,7 @@
      <contents unit="LBS">  8000.00 </contents>
   </tank>
 
-  <tank type="FUEL" number="4">
+  <tank type="FUEL" number="6">
      <name>Right Reserve tank</name>
      <location unit="IN">
        <x> 800.30 </x>
@@ -410,8 +457,6 @@
  <system file="crash-detect"/>
  <system file="particles"/>
  
-
-
  <flight_control name="FCS: 707-400">
 
   <channel name="Pitch">

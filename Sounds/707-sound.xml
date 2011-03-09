@@ -1,2196 +1,405 @@
 <?xml version="1.0"?>
+ 
 <PropertyList>
+
  <fx>
-  <!-- ##################### -->
-  <!-- ## INTERIOR ######### -->
-  <!-- ##################### -->
-
-
-  <!-- REVERSORES -->
-	<engineRev1>
-		<name>Leftengine1reverseinside</name>
-		<path>Aircraft/707-400/Sounds/RR_Conways_MK509_reversers.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<and>
-				<property>engines/engine[0]/running</property>
-				<property>/engines/engine/reverser-pos-norm</property>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-			</and>
-		</condition>
-		<volume>
-			<property>/engines/engine[0]/thrust_lb</property>
-			<type>ln</type>
-			<factor>1.00</factor>
-			<offset>0.05</offset>
-		</volume>
-		<pitch>
-		<offset>1.6</offset>
-		</pitch>
-	</engineRev1>
-
-  <engineRev2>
-   <name>Left engine 2 reverse inside</name>
-   <path>Aircraft/707-400/Sounds/RR_Conways_MK509_reversers.wav</path>
+   <engine>
+   <name>leftengine</name>
+   <path>Sounds/jet.wav</path>
    <mode>looped</mode>
    <condition>
-    <and>
-	     <property>engines/engine[1]/running</property>
-	     <property>/engines/engine/reverser-pos-norm</property>
-		<equals>
-			<property>/sim/current-view/internal</property>
-			<value>true</value>
-		</equals>
-    </and>
+    <or>
+     <property>/engines/engine[0]/running</property>
+     <property>/engines/engine[1]/running</property>     
+    </or>
    </condition>
    <volume>
-    <property>/engines/engine[1]/thrust_lb</property>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
     <type>ln</type>
-    <factor>1.00</factor>
+    <factor>0.10</factor>
     <offset>0.05</offset>
    </volume>
-   <pitch>
-    <offset>1.6</offset>
-   </pitch>
-  </engineRev2>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.10</factor>
+    <offset>0.05</offset>
+   </volume>
+<position>
+<x>4.5</x>
+<y>4.7</y>
+<z>1.2</z>
+</position>
+			<orientation>
+				<x> 0 </x>
+				<y> 1 </y>
+				<z> 0 </z>
+				<inner-angle>180</inner-angle>
+				<outer-angle>360</outer-angle>
+				<outer-gain>0.1</outer-gain>
+<reference-dist>20</reference-dist>
+			</orientation>
+  </engine>
   
-  <engineRev3>
-   <name>Left engine 3 reverse inside</name>
-   <path>Aircraft/707-400/Sounds/RR_Conways_MK509_reversers.wav</path>
+  <engine>
+   <name>leftengine</name>
+   <path>Sounds/thrust.wav</path>
    <mode>looped</mode>
    <condition>
-    <and>
-	     <property>engines/engine[2]/running</property>
-	     <property>/engines/engine/reverser-pos-norm</property>
-		<equals>
-			<property>/sim/current-view/internal</property>
-			<value>true</value>
-		</equals>
-    </and>
+    <or>
+     <property>/engines/engine[0]/running</property>
+     <property>/engines/engine[1]/running</property>     
+    </or>
    </condition>
    <volume>
-    <property>/engines/engine[2]/thrust_lb</property>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
     <type>ln</type>
-    <factor>1.00</factor>
+    <factor>0.50</factor>
     <offset>0.05</offset>
    </volume>
-   <pitch>
-    <offset>1.6</offset>
-   </pitch>
-  </engineRev3>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.50</factor>
+    <offset>0.05</offset>
+   </volume>
+<position>
+<x>7.35</x>
+<y>4.7</y>
+<z>1.2</z>
+</position>
+			<orientation>
+				<x> 1 </x>
+				<y> 0 </y>
+				<z> 0 </z>
+				<inner-angle>90</inner-angle>
+				<outer-angle>180</outer-angle>
+				<outer-gain>0.75</outer-gain>
+<reference-dist>20</reference-dist>
+			</orientation>
+  </engine>
   
-  <engineRev4>
-   <name>Left engine 4 reverse inside</name>
-   <path>Aircraft/707-400/Sounds/RR_Conways_MK509_reversers.wav</path>
+  <engine>
+   <name>rightengine</name>
+   <path>Sounds/jet.wav</path>
    <mode>looped</mode>
    <condition>
-    <and>
-	     <property>engines/engine[3]/running</property>
-	     <property>/engines/engine/reverser-pos-norm</property>
-		<equals>
-			<property>/sim/current-view/internal</property>
-			<value>true</value>
-		</equals>
-    </and>
+    <or>
+     <property>/engines/engine[0]/running</property>
+     <property>/engines/engine[1]/running</property>     
+    </or>
    </condition>
    <volume>
-    <property>/engines/engine[3]/thrust_lb</property>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
     <type>ln</type>
-    <factor>1.00</factor>
+    <factor>0.10</factor>
     <offset>0.05</offset>
    </volume>
-   <pitch>
-    <offset>1.6</offset>
-   </pitch>
-  </engineRev4>
-
-  <!-- TURBINA -->
-  	<!-- Idle -->
-		<engineIDLE1>
-			<name>Engine 1 Idle</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_idle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>30.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.55</factor>
-				<offset>0.05</offset>
-				<min>0.5</min>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineIDLE1>
-
-		<engineIDLE2>
-			<name>Engine 2 Idle</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_idle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>30.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineIDLE2>
-		
-		<engineIDLE3>
-			<name>Engine 3 Idle</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_idle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>30.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineIDLE3>
-
-		<engineIDLE4>
-			<name>Engine 4 Idle</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_idle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>30.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineIDLE4>
-		
-  	<!-- Median -->
-		<engineMedian1>
-			<name>Engine 1 Median</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spoolsoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineMedian1>
-
-		<engineMedian2>
-			<name>Engine 2 Median</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spoolsoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineMedian2>
-		
-		<engineMedian3>
-			<name>Engine 3 Median</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spoolsoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineMedian3>
-
-		<engineMedian4>
-			<name>Engine 4 Median</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spoolsoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineMedian4>
-		
-  	<!-- High -->
-		<engineHigh1>
-			<name>Engine 1 High</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spool.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineHigh1>
-
-		<engineHigh2>
-			<name>Engine 2 High</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spool.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineHigh2>
-		
-		<engineHigh3>
-			<name>Engine 3 High</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spool.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineHigh3>
-
-		<engineHigh4>
-			<name>Engine 4 High</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_spool.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineHigh4>
-
-  	<!-- FullThrust -->
-		<engineFullThrust1>
-			<name>Engine 1 FullThrust</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineFullThrust1>
-
-		<engineFullThrust2>
-			<name>Engine 2 FullThrust</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineFullThrust2>
-		
-		<engineFullThrust3>
-			<name>Engine 3 FullThrust</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineFullThrust3>
-
-		<engineFullThrust4>
-			<name>Engine 4 FullThrust</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineFullThrust4>
-				
-		
-  	<!-- Engine Fan -->
-		<engineEngineFan1>
-			<name>Engine 1 EngineFan</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fan.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineEngineFan1>
-
-		<engineEngineFan2>
-			<name>Engine 2 EngineFan</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fan.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineEngineFan2>
-		
-		<engineEngineFan3>
-			<name>Engine 3 EngineFan</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fan.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineEngineFan3>
-
-		<engineEngineFan4>
-			<name>Engine 4 EngineFan</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_fan.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineEngineFan4>
-		
-		
+   <volume>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.10</factor>
+    <offset>0.05</offset>
+   </volume>
+<position>
+<x>4.5</x>
+<y>-4.7</y>
+<z>1.2</z>
+</position>
+			<orientation>
+				<x> 0 </x>
+				<y> 1 </y>
+				<z> 0 </z>
+				<inner-angle>180</inner-angle>
+				<outer-angle>360</outer-angle>
+				<outer-gain>0.1</outer-gain>
+<reference-dist>20</reference-dist>
+			</orientation>
+  </engine>
   
-  <!-- Desligando a turbina  -->
-<engineTOff1>
-	<name>Engine 1 shutdown</name>
-	<path>Aircraft/707-400/Sounds/RR_Conways_MK509_shutdown.wav</path>
-	<condition>
-		<and>
-			<equals>
-				<property>/engines/engine[0]/starter</property>
-				<value>0</value>
-			</equals>
-			<equals>
-				<property>/engines/engine[0]/cutoff</property>
-				<value>1</value>
-			</equals>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>true</value>
-			</equals>
-		</and>
-	</condition>
-	<position>	
-		<x>-8.05523</x>
-		<y> 2.44749</y>
-		<z>-7.21154</z>
-	</position>
-</engineTOff1>
- <!-- x/y/z == right/up/back -->
-
-<engineTOff2>
-	<name>Engine 2 shutdown</name>
-	<path>Aircraft/707-400/Sounds/RR_Conways_MK509_shutdown.wav</path>
-	<condition>
-		<and>
-			<equals>
-				<property>/engines/engine[1]/starter</property>
-				<value>0</value>
-			</equals>
-			<equals>
-				<property>/engines/engine[1]/cutoff</property>
-				<value>1</value>
-			</equals>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>true</value>
-			</equals>
-		</and>
-	</condition>
-	<position>	
-		<x>-8.05523</x>
-		<y> 2.44749</y>
-		<z>-7.21154</z>
-	</position>
-</engineTOff2>
-<!-- x/y/z == right/up/back -->
-
-<engineTOff3>
-	<name>Engine 3 shutdown</name>
-	<path>Aircraft/707-400/Sounds/RR_Conways_MK509_shutdown.wav</path>
-	<condition>
-		<and>
-			<equals>
-				<property>/engines/engine[2]/starter</property>
-				<value>0</value>
-			</equals>
-			<equals>
-				<property>/engines/engine[2]/cutoff</property>
-				<value>1</value>
-			</equals>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>true</value>
-			</equals>
-		</and>
-	</condition>
-	<position>	
-		<x> 8.05523</x>
-		<y> 2.44749</y>
-		<z>-7.21154</z>
-	</position>
-</engineTOff3>
-<!-- x/y/z == right/up/back -->
-
-<engineTOff4>
-	<name>Engine 4 shutdown</name>
-	<path>Aircraft/707-400/Sounds/RR_Conways_MK509_shutdown.wav</path>
-	<condition>
-		<and>
-			<equals>
-				<property>/engines/engine[3]/starter</property>
-				<value>0</value>
-			</equals>
-			<equals>
-				<property>/engines/engine[3]/cutoff</property>
-				<value>1</value>
-			</equals>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>true</value>
-			</equals>
-		</and>
-	</condition>
-	<position>	
-		<x> 8.05523</x>
-		<y> 2.44749</y>
-		<z>-7.21154</z>
-	</position>
-</engineTOff4>
-<!-- x/y/z == right/up/back -->
-
-
-  <!-- Ligando a turbina  -->
-		<engineTS1>
-			<name>Engine 1 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_starter.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[0]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTS1>
-		
-		<engineTS2>
-			<name>Engine 2 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_starter.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[1]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTS2>
-		
-		<engineTS3>
-			<name>Engine 3 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_starter.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[2]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTS3>
-		
-		<engineTS4>
-			<name>Engine 4 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_starter.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[3]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTS4>
-		
-	<!-- Starter da Turbofan -->
-		<engineTStart1>
-			<name>Engine 1 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_ignition.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[0]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>5.1</value>
-					</less-than>					
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTStart1>
-
-		<engineTStart2>
-			<name>Engine 2 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_ignition.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[1]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>5.1</value>
-					</less-than>					
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTStart2>
-
-		<engineTStart3>
-			<name>Engine 3 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_ignition.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[2]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>5.1</value>
-					</less-than>					
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTStart3>
-
-		<engineTStart4>
-			<name>Engine 4 startup</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_ignition.wav</path>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/starter</property>
-						<value>1</value>
-					</equals>
-					<equals>
-						<property>/engines/engine[3]/cutoff</property>
-						<value>0</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>5.1</value>
-					</less-than>					
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>true</value>
-					</equals>
-				</and>
-			</condition>
-		</engineTStart4>
-
-
-  <!-- Condicionador de ar -->
-	<arcondicionado>
-		<name>Aircond</name>
-		<mode>looped</mode>
-		<path>Aircraft/707-400/Sounds/RR_Conways_MK509_cockpit.wav</path>
-		<condition>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>true</value>
-			</equals>
-		</condition>
-	</arcondicionado>
-
-  <!-- Avionicos -->
-  <!-- ***** Adicionar condicao para verificar pela eletricidade -->
-	<avionicos>
-		<name>Avionicos</name>
-		<mode>looped</mode>
-		<path>Aircraft/707-400/Sounds/RR_Conways_MK509_avionics.wav</path>
-		<condition>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>true</value>
-			</equals>
-		</condition>
-	</avionicos>
-
-  <!-- APU 
-	<apu>
-		<name>APU</name>
-		<mode>looped</mode>
-		<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xgpu.wav</path>
-		<condition>
-			<equals>
-				<property>/systems/electrical/suppliers/external</property>
-				<value>true</value>
-			</equals>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>true</value>
-			</equals>
-		</condition>
-	</apu>
--->
-
-  <!-- PAX
-  <conversapax>
-   <name>PAX conversa</name>
+  <engine>
+   <name>rightengine</name>
+   <path>Sounds/thrust.wav</path>
    <mode>looped</mode>
-   <path>Sounds/Airplane_ambience.wav</path>
+   <condition>
+    <or>
+     <property>/engines/engine[0]/running</property>
+     <property>/engines/engine[1]/running</property>     
+    </or>
+   </condition>
+   <volume>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.50</factor>
+    <offset>0.05</offset>
+   </volume>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.50</factor>
+    <offset>0.05</offset>
+   </volume>
+<position>
+<x>7.35</x>
+<y>-4.7</y>
+<z>1.2</z>
+</position>
+			<orientation>
+				<x> 1 </x>
+				<y> 0 </y>
+				<z> 0 </z>
+				<inner-angle>90</inner-angle>
+				<outer-angle>180</outer-angle>
+				<outer-gain>0.75</outer-gain>
+<reference-dist>20</reference-dist>
+			</orientation>
+  </engine>
+
+  <engine>
+   <name>leftwhine</name>
+   <path>Sounds/whine.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <or>
+     <property>/engines/engine[0]/running</property>
+     <property>/engines/engine[1]/running</property>     
+    </or>
+   </condition>
+   <volume>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.10</factor>
+    <offset>0.1</offset>
+   </volume>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.10</factor>
+    <offset>0.1</offset>
+   </volume> 
+
+   <pitch>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
+    <type>log</type>
+    <factor>0.20</factor>
+    <offset>0.10</offset>
+   </pitch>
+   <pitch>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>log</type>
+    <factor>0.20</factor>
+    <offset>0.10</offset>
+   </pitch> 
+<position>
+<x>4.5</x>
+<y>4.7</y>
+<z>1.2</z>
+</position>
+			<orientation>
+				<x> -1 </x>
+				<y> 0 </y>
+				<z> 0 </z>
+				<inner-angle>90</inner-angle>
+				<outer-angle>180</outer-angle>
+				<outer-gain>0.1</outer-gain>
+<reference-dist>10</reference-dist>
+			</orientation>
+  </engine>
+  
+  <engine>
+   <name>leftwhine</name>
+   <path>Sounds/whine.wav</path>
+   <mode>looped</mode>
+   <condition>
+    <or>
+     <property>/engines/engine[0]/running</property>
+     <property>/engines/engine[1]/running</property>     
+    </or>
+   </condition>
+   <volume>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.10</factor>
+    <offset>0.1</offset>
+   </volume>
+   <volume>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>ln</type>
+    <factor>0.10</factor>
+    <offset>0.1</offset>
+   </volume> 
+
+   <pitch>
+    <property>/engines/engine[0]/thrust_lb[0]</property>
+    <type>log</type>
+    <factor>0.20</factor>
+    <offset>0.10</offset>
+   </pitch>
+   <pitch>
+    <property>/engines/engine[1]/thrust_lb[0]</property>
+    <type>log</type>
+    <factor>0.20</factor>
+    <offset>0.10</offset>
+   </pitch> 
+<position>
+<x>4.5</x>
+<y>-4.7</y>
+<z>1.2</z>
+</position>
+			<orientation>
+				<x> -1 </x>
+				<y> 0 </y>
+				<z> 0 </z>
+				<inner-angle>90</inner-angle>
+				<outer-angle>180</outer-angle>
+				<outer-gain>0.1</outer-gain>
+<reference-dist>10</reference-dist>
+			</orientation>
+  </engine>
+
+
+  <rumble>
+   <name>rumble</name>
+   <mode>looped</mode>
+   <path>Aircraft/737-500/Sounds/roll.wav</path>
+   <condition>
+    <or>
+     <property>/gear/gear[0]/wow</property>
+     <property>/gear/gear[1]/wow</property>
+     <property>/gear/gear[2]/wow</property>
+    </or>
+   </condition>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <type>log</type>
+    <factor>0.5</factor>
+   </volume>
+  </rumble>
+
+  <gear>
+   <name>gear</name>
+   <mode>in-transit</mode>
+   <path>Sounds/gear.wav</path>
+   <property>/gear/gear[0]/position-norm</property>
+   <pitch>
+    <internal>dt_play</internal>
+    <offset>1.0</offset>
+    <factor>-0.001</factor>
+   </pitch>
+  </gear>
+
+  <gear>
+   <name>gear-lock</name>
+   <path>Sounds/gear-lck.wav</path>
    <condition>
     <equals>
-     <property>/sim/current-view/internal</property>
-     <value>true</value>
+     <property>/gear/gear[0]/position-norm</property>
+     <value>0</value>
     </equals>
    </condition>
-  </conversapax>
- -->
-
-  
-  
-  <!-- ############################################################################## -->
-  <!-- ### Externo ################################################################## -->
-  <!-- ############################################################################## -->
-  
-  <!-- Som ambiente -->
-  <ambienteEx>
-			<name>AmbienteRR</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xenvironment.WAV</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<or>
-						<equals>
-							<property>/engines/engine[0]/running</property>
-							<value>true</value>
-						</equals>
-						<equals>
-							<property>/engines/engine[1]/running</property>
-							<value>true</value>
-						</equals>					
-						<equals>
-							<property>/engines/engine[2]/running</property>
-							<value>true</value>
-						</equals>
-						<equals>
-							<property>/engines/engine[3]/running</property>
-							<value>true</value>
-						</equals>
-					</or>
-						<equals>
-							<property>/sim/current-view/internal</property>
-							<value>false</value>
-						</equals>
-				</and>
-			 </condition>
-			  <volume>
-			   <property>sim/sound/Evolume</property>
-			  </volume>
-			  <position>
-			      <x>0.00</x>
-			      <y>0.00</y>
-			      <z>0.00</z>
-			 </position>
-			 <reference-dist>10.0</reference-dist>
-			 <max-dist>100.0</max-dist>
-  </ambienteEx>
-  
-  <!-- APU
-	<apu>
-		<name>APU</name>
-		<mode>looped</mode>
-		<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xgpu.wav</path>
-		<condition>
-			<equals>
-				<property>/systems/electrical/suppliers/external</property>
-				<value>true</value>
-			</equals>
-			<equals>
-				<property>/sim/current-view/internal</property>
-				<value>false</value>
-			</equals>
-		</condition>
-			  <volume>
-			   <property>sim/sound/Evolume</property>
-			  </volume>
-			  <position>
-			      <x>0.00</x>
-			      <y>0.00</y>
-			      <z>0.00</z>
-			 </position>
-			 <reference-dist>10.0</reference-dist>
-			 <max-dist>100.0</max-dist>
-	</apu>
-   -->
-
-  <!-- REVERSORES -->
-	<engineExtRev1>
-		<name>Left engine1 reverse outside</name>
-		<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xreversers.wav</path>
-		<mode>looped</mode>
-		<condition>
-			<and>
-					<property>engines/engine[0]/running</property>
-					<property>/engines/engine/reverser-pos-norm</property>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-			</and>
-		</condition>
-		<volume>
-			<property>/engines/engine[0]/thrust_lb</property>
-			<type>ln</type>
-			<factor>1.00</factor>
-			<offset>0.05</offset>
-		</volume>
-		<pitch>
-		<offset>1.6</offset>
-		</pitch>
-	</engineExtRev1>
-
-  <engineExtRev2>
-   <name>Left engine 2 reverse outside</name>
-   <path>Aircraft/707-400/Sounds/RR_Conways_MK509_xreversers.wav</path>
+  </gear>
+  <!-- 
+  <gear>
+   <name>gear-horn</name>
+   <path>Sounds/gear-hrn.wav</path>
    <mode>looped</mode>
    <condition>
-    <and>
-	     <property>engines/engine[1]/running</property>
-	     <property>/engines/engine/reverser-pos-norm</property>
-		<equals>
-			<property>/sim/current-view/internal</property>
-			<value>false</value>
-		</equals>
-    </and>
-   </condition>
-   <volume>
-    <property>/engines/engine[1]/thrust_lb</property>
-    <type>ln</type>
-    <factor>1.00</factor>
-    <offset>0.05</offset>
-   </volume>
-   <pitch>
-    <offset>1.6</offset>
-   </pitch>
-  </engineExtRev2>
-  
-  <engineExtRev3>
-   <name>Left engine 3 reverse outside</name>
-   <path>Aircraft/707-400/Sounds/RR_Conways_MK509_xreversers.wav</path>
-   <mode>looped</mode>
+    <equals>
+     <property>/gear/gear[0]/position-norm</property>
+     <value>0</value>
+     </equals>
+     </condition>      
+  </gear>
+  -->
+
+  <squeal>
+   <name>squeal</name>
+   <path>Sounds/squeal.wav</path>
    <condition>
-    <and>
-	     <property>engines/engine[2]/running</property>
-	     <property>/engines/engine/reverser-pos-norm</property>
-		<equals>
-			<property>/sim/current-view/internal</property>
-			<value>false</value>
-		</equals>
-    </and>
+    <or>
+     <property>/gear/gear[0]/wow</property>
+     <property>/gear/gear[1]/wow</property>
+     <property>/gear/gear[2]/wow</property>
+    </or>
    </condition>
    <volume>
-    <property>/engines/engine[2]/thrust_lb</property>
-    <type>ln</type>
-    <factor>1.00</factor>
-    <offset>0.05</offset>
+    <property>/velocities/speed-down-fps</property>
+    <factor>0.05</factor>
+   </volume>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+   </volume>
+   <volume>
+    <internal>dt_stop</internal>
+    <factor>0.05</factor>
+    <max>1.0</max>
    </volume>
    <pitch>
-    <offset>1.6</offset>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.0025</factor>
+    <offset>1.2</offset>
    </pitch>
-  </engineExtRev3>
-  
-  <engineExtRev4>
-   <name>Left engine 4 reverse outside</name>
-   <path>Aircraft/707-400/Sounds/RR_Conways_MK509_xreversers.wav</path>
+  </squeal>
+ 
+  <flap>
+   <name>flaps</name>
+   <mode>in-transit</mode>
+   <path>Sounds/flaps.wav</path>
+   <property>/surface-positions/flap-pos-norm</property>
+   <volume>
+    <factor>0.45</factor>
+   </volume>
+  </flap>
+
+  <wind>
+   <name>wind</name>
    <mode>looped</mode>
-   <condition>
-    <and>
-	     <property>engines/engine[3]/running</property>
-	     <property>/engines/engine/reverser-pos-norm</property>
-		<equals>
-			<property>/sim/current-view/internal</property>
-			<value>false</value>
-		</equals>
-    </and>
-   </condition>
+   <path>Sounds/wind-8khz.wav</path>
+   <property>/velocities/airspeed-kt</property>
    <volume>
-    <property>/engines/engine[3]/thrust_lb</property>
-    <type>ln</type>
-    <factor>1.00</factor>
-    <offset>0.05</offset>
+    <property>/position/altitude-ft</property>
+    <factor>-0.000015</factor>
+    <offset>1.0</offset>
+    <min>0.1</min>
+    <max>1.0</max>
+   </volume>
+   <volume>
+     <property>/velocities/airspeed-kt</property>
+     <factor>0.0015</factor>
+     <min>0.03</min>
+     <max>0.25</max>
    </volume>
    <pitch>
-    <offset>1.6</offset>
+    <property>/velocities/airspeed-kt</property>
+    <factor>0.01</factor>
+    <offset>1.25</offset>
    </pitch>
-  </engineExtRev4>
+  </wind>
+ 
+  <stall>
+   <name>stall</name>
+   <path>Sounds/stall.wav</path>
+   <property>/sim/alarms/stall-warning</property>
+   <volume>
+    <property>/velocities/airspeed-kt</property>
+    <min>125.0</min>
+   </volume>
+  </stall>
 
-  <!-- TURBINA -->
-  	<!-- Idle -->
-		<engineExtIDLE1>
-			<name>Engine 1 Idle External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>31.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.55</factor>
-				<offset>0.05</offset>
-				<min>0.5</min>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtIDLE1>
-
-		<engineExtIDLE2>
-			<name>Engine 2 Idle External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>31.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtIDLE2>
-		
-		<engineExtIDLE3>
-			<name>Engine 3 Idle External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>31.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtIDLE3>
-
-		<engineExtIDLE4>
-			<name>Engine 4 Idle External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidle.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>31.0</value>
-					</less-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtIDLE4>
-		
-  	<!-- Median -->
-		<engineExtMedian1>
-			<name>Engine 1 Median External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidlesoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtMedian1>
-
-		<engineExtMedian2>
-			<name>Engine 2 Median External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidlesoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtMedian2>
-		
-		<engineExtMedian3>
-			<name>Engine 3 Median External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidlesoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtMedian3>
-
-		<engineExtMedian4>
-			<name>Engine 4 Median External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xidlesoft.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<less-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>70.0</value>
-					</less-than>
-					<greater-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>30.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtMedian4>
-		
-  	<!-- High -->
-		<engineExtHigh1>
-			<name>Engine 1 High External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xspoolhigh.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtHigh1>
-
-		<engineExtHigh2>
-			<name>Engine 2 High External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xspoolhigh.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtHigh2>
-		
-		<engineExtHigh3>
-			<name>Engine 3 High External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xspoolhigh.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtHigh3>
-
-		<engineExtHigh4>
-			<name>Engine 4 High External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xspoolhigh.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>70.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtHigh4>
-
-  	<!-- FullThrust -->
-		<engineExtFullThrust1>
-			<name>Engine 1 FullThrust External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xfullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[0]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[0]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[0]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtFullThrust1>
-
-		<engineExtFullThrust2>
-			<name>Engine 2 FullThrust External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xfullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[1]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[1]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[1]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x>-8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtFullThrust2>
-		
-		<engineExtFullThrust3>
-			<name>Engine 3 FullThrust External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xfullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[2]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[2]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[2]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y>2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtFullThrust3>
-
-		<engineExtFullThrust4>
-			<name>Engine 4 FullThrust External</name>
-			<path>Aircraft/707-400/Sounds/RR_Conways_MK509_xfullthrust.wav</path>
-			<mode>looped</mode>
-			<condition>
-				<and>
-					<equals>
-						<property>/engines/engine[3]/running</property>
-						<value>true</value>
-					</equals>
-					<equals>
-						<property>/sim/current-view/internal</property>
-						<value>false</value>
-					</equals>
-					<greater-than>
-						<property>/engines/engine[3]/n1</property>
-						<value>99.0</value>
-					</greater-than>
-				</and>
-			</condition>
-			<volume>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>ln</type>
-				<factor>1.25</factor>
-				<offset>0.05</offset>
-			</volume>
-			<pitch>
-				<property>/engines/engine[3]/thrust_lb[0]</property>
-				<type>log</type>
-				<factor>0.20</factor>
-				<offset>0.10</offset>
-			</pitch>
-			<position>
-				<!-- x/y/z==right/up/back -->
-				<x> 8.05523</x>
-				<y> 2.44749</y>
-				<z>-7.21154</z>
-			</position>
-			<reference-dist>200.0</reference-dist>
-			<max-dist>500.0</max-dist>
-		</engineExtFullThrust4>
-				
   
-  
-  
-  
-  
-  
- </fx>
+<switch>
+   <name>click on</name>
+   <mode>once</mode>
+   <path>Aircraft/737-500/Sounds/FastenSeatbelt.wav</path>
+   <condition>
+   <property>controls/switches/seatbelt-sign</property>
+  </condition>
+   <volume>
+    <factor>1</factor>
+   </volume>
+  </switch>
 
+</fx>
+ 
 </PropertyList>

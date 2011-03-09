@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">Pluna</name>
-            <texture>Pluna.rgb</texture>
+            <texture>Pluna.png</texture>
         </livery>
     </model>
 </sim>

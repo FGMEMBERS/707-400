@@ -11,15 +11,21 @@
       <table>
         <independentVar lookup="row">systems/NWS/engaged</independentVar>
          <tableData>
-            0     -0.1
+            0     -0.90
             1     -1.0
          </tableData>
       </table>
       <output>fcs/steer-cmd-norm</output>
+	 <!--
+      <output>control/gear/nose-wheel-steering</output>
+	 -->
      </scheduled_gain>
 
    <pure_gain name="Copy">
      <input>fcs/steer-cmd-norm</input>
+	 <!--
+     <input>control/gear/nose-wheel-steering</input>
+	 -->
      <gain>1</gain>
      <output>/sim/multiplay/generic/float[2]</output>
    </pure_gain>

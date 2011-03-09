@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">Prestes</name>
-            <texture>Prestes.rgb</texture>
+            <texture>Prestes.png</texture>
         </livery>
     </model>
 </sim>
