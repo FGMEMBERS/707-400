@@ -54,7 +54,7 @@ OBJECT poly
 name "CaptainSeat"
 data 8
 Cube.019
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
 crease 30.000000
 numvert 48
 -18.5878 2.62745 0.265254
@@ -377,7 +377,7 @@ OBJECT poly
 name "CaptainSeatArm"
 data 8
 Cube.077
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
 crease 30.000000
 numvert 8
 -18.9026 2.77982 0.207149
@@ -439,7 +439,7 @@ OBJECT poly
 name "CopilotSeat"
 data 8
 Cube.068
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
 crease 30.000000
 numvert 48
 -18.5878 2.62745 -0.659837
@@ -762,7 +762,7 @@ OBJECT poly
 name "CopilotSeatArm"
 data 8
 Cube.078
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
 crease 30.000000
 numvert 8
 -18.5669 2.81143 -0.207947
@@ -821,7 +821,7 @@ OBJECT poly
 name "EngineerBoggie"
 data 12
 Cylinder.009
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
 crease 30.000000
 numvert 74
 -17.5777 2.54479 -0.021364
@@ -1554,7 +1554,7 @@ OBJECT poly
 name "EngineerSeat"
 data 8
 Cube.065
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
 crease 30.000000
 numvert 40
 -17.407 2.62745 0.188614
@@ -1827,7 +1827,7 @@ OBJECT poly
 name "EngineerTable"
 data 8
 Cube.002
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-cockpit.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-cockpit.rgb"
 crease 30.000000
 numvert 8
 -17.0078 2.75845 -0.549777
@@ -1886,7 +1886,7 @@ OBJECT poly
 name "FlapLever"
 data 8
 Cube.014
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 58
 -19.0216 2.63469 -0.150614
@@ -2331,7 +2331,7 @@ OBJECT poly
 name "LeftColumn"
 data 8
 Cube.021
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-cockpit.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-cockpit.rgb"
 crease 30.000000
 numvert 10
 -19.3905 2.68634 0.40134
@@ -2402,7 +2402,7 @@ OBJECT poly
 name "LeftYoke"
 data 12
 Cylinder.006
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
 crease 30.000000
 numvert 414
 -19.126 2.8599 0.444142
@@ -5896,7 +5896,7 @@ OBJECT poly
 name "LeftYokeColumn"
 data 12
 Cylinder.004
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
 crease 30.000000
 numvert 162
 -19.0237 2.27573 0.44413
@@ -7347,7 +7347,7 @@ OBJECT poly
 name "LeftYokeCylinder"
 data 12
 Cylinder.003
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
 crease 30.000000
 numvert 66
 -18.9872 2.26605 0.403364
@@ -8030,7 +8030,7 @@ OBJECT poly
 name "ObserverSeat"
 data 8
 Cube.022
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-seat.rgb"
 crease 30.000000
 numvert 40
 -17.1102 2.62504 0.842495
@@ -8301,7 +8301,7 @@ OBJECT poly
 name "ParkingBrakeLever"
 data 8
 Cylinder
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 92
 -18.9385 2.66339 0.165448
@@ -9178,7 +9178,7 @@ OBJECT poly
 name "Pedestal."
 data 8
 Cube.007
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-2D.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-2D.rgb"
 crease 30.000000
 numvert 346
 -18.9564 2.67129 -0.183197
@@ -11686,7 +11686,7 @@ OBJECT poly
 name "RightColumn"
 data 8
 Cube.020
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-cockpit.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-cockpit.rgb"
 crease 30.000000
 numvert 10
 -19.3905 2.68634 -0.525083
@@ -11757,7 +11757,7 @@ OBJECT poly
 name "RightYoke"
 data 12
 Cylinder.005
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
 crease 30.000000
 numvert 414
 -19.126 2.8599 -0.483802
@@ -15251,7 +15251,7 @@ OBJECT poly
 name "RightYokeColumn"
 data 12
 Cylinder.007
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
 crease 30.000000
 numvert 162
 -19.0237 2.27573 -0.483815
@@ -16702,7 +16702,7 @@ OBJECT poly
 name "RightYokeCylinder"
 data 12
 Cylinder.008
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-yoke.rgb"
 crease 30.000000
 numvert 66
 -18.9872 2.26605 -0.52458
@@ -17385,7 +17385,7 @@ OBJECT poly
 name "SpoilerLever"
 data 8
 Cube.015
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 42
 -19.0216 2.71735 0.128276
@@ -17688,7 +17688,7 @@ OBJECT poly
 name "StabLever"
 data 8
 Cube.017
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 34
 -19.0076 2.71509 0.172947
@@ -17941,7 +17941,7 @@ OBJECT poly
 name "Throttle1"
 data 8
 Cube.076
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -19.0443 2.63447 0.05953
@@ -23424,7 +23424,7 @@ OBJECT poly
 name "Throttle2"
 data 8
 Cube.075
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -19.0443 2.63447 0.025218
@@ -28907,7 +28907,7 @@ OBJECT poly
 name "Throttle3"
 data 8
 Cube.074
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -19.0443 2.63447 -0.002774
@@ -34390,7 +34390,7 @@ OBJECT poly
 name "Throttle4"
 data 8
 Cube.029
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -19.0443 2.63447 -0.036936
@@ -39873,7 +39873,7 @@ OBJECT poly
 name "TrimLever"
 data 8
 Cube.016
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 34
 -19.0216 2.63454 0.151986

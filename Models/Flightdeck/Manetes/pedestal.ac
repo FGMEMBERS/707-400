@@ -2296,7 +2296,7 @@ name "FlapLever"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.014
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 58
 -313.893 10.4543 -2.31355
@@ -2742,7 +2742,7 @@ name "ParkingBrakeLever"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cylinder
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 92
 -312.674 9.27951 2.77121
@@ -3620,7 +3620,7 @@ name "SpoilerLever"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.015
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 42
 -314.198 11.2241 2.23812
@@ -3924,7 +3924,7 @@ name "StabLever"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.017
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 34
 -314.289 10.0969 2.928
@@ -4178,7 +4178,7 @@ name "Throttle1"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.076
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -315.316 10.0486 0.799101
@@ -9662,7 +9662,7 @@ name "Throttle2"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.075
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -315.316 10.0483 0.423205
@@ -15146,7 +15146,7 @@ name "Throttle3"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.074
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -315.316 10.0483 -0.251306
@@ -20630,7 +20630,7 @@ name "Throttle4"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.029
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 630
 -315.316 10.0483 -0.622989
@@ -26114,7 +26114,7 @@ name "TrimLever"
 loc 295.568 -0.393896 -0.345348
 data 8
 Cube.016
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 34
 -314.532 10.3062 2.43684

@@ -7,7 +7,7 @@ name "ParkingBrakeLever"
 loc 0.169161 0 0
 data 8
 Cylinder
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 92
 -18.546 0.550406 0.128273
@@ -885,7 +885,7 @@ name "StabLever"
 loc 0.195887 0.030405 -0.48654
 data 8
 Cube.017
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 34
 -18.6161 0.602816 0.136848
@@ -1139,7 +1139,7 @@ name "TrimLever"
 loc 0.195887 0.030405 -0.48654
 data 8
 Cube.016
-texture "C:/Program Files (x86)/FlightGear/data/Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
+texture "Aircraft/747-200/Models/Flightdeck/747-200-lever.rgb"
 crease 30.000000
 numvert 34
 -18.6301 0.522266 0.115887
