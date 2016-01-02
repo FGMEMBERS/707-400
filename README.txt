@@ -67,40 +67,40 @@ Best regards,
 Prestes Hangar
 
 ---------------------------------------------------------------------------
-PORTUGUÊS - BRASIL
+PORTUGUÃŠS - BRASIL
 ---------------------------------------------------------------------------
 
-LICENÇA
+LICENÃ‡A
 =======
 
-Este trabalho está sob a GNU-GPL versão 3.0. Vide http://presteshangar.blogspot.com/ para mais informações sobre a licença.
+Este trabalho estÃ¡ sob a GNU-GPL versÃ£o 3.0. Vide http://presteshangar.blogspot.com/ para mais informaÃ§Ãµes sobre a licenÃ§a.
 
 Copyright (C) 2009 Isaias V. Prestes (Prestes Hangar)
 
-    Este programa é um software livre; você pode redistribui-lo e/ou 
-    modifica-lo dentro dos termos da Licença Pública Geral GNU como 
-    publicada pela Fundação do Software Livre (FSF); na versão 2 da 
-    Licença, ou (na sua opnião) qualquer versão.
+    Este programa Ã© um software livre; vocÃª pode redistribui-lo e/ou 
+    modifica-lo dentro dos termos da LicenÃ§a PÃºblica Geral GNU como 
+    publicada pela FundaÃ§Ã£o do Software Livre (FSF); na versÃ£o 2 da 
+    LicenÃ§a, ou (na sua opniÃ£o) qualquer versÃ£o.
 
-    Este programa é distribuido na esperança que possa ser  util, 
-    mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÇÂO a qualquer
-    MERCADO ou APLICAÇÃO EM PARTICULAR. Veja a
-    Licença Pública Geral GNU para maiores detalhes.
+    Este programa Ã© distribuido na esperanÃ§a que possa ser  util, 
+    mas SEM NENHUMA GARANTIA; sem uma garantia implicita de ADEQUAÃ‡Ã‚O a qualquer
+    MERCADO ou APLICAÃ‡ÃƒO EM PARTICULAR. Veja a
+    LicenÃ§a PÃºblica Geral GNU para maiores detalhes.
 
-    Você deve ter recebido uma cópia da Licença Pública Geral GNU
-    junto com este programa, se não, escreva para a Fundação do Software
+    VocÃª deve ter recebido uma cÃ³pia da LicenÃ§a PÃºblica Geral GNU
+    junto com este programa, se nÃ£o, escreva para a FundaÃ§Ã£o do Software
     Livre(FSF) Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 
     
 O Boeing 707-400
 ================
 
-O Boeing 707 foi um avião comercial a jato, produzido pela Boeing. Até a década de 1950, a Boeing era uma fabricante sem muito expressão, entre as muitas existentes nos Estados Unidos. Era conhecida apenas por suas aeronaves militares, e na verdade, o 707 nasceu como um projeto de nave de reabastecimento, conhecida como KC-135A.
-Embora não tenha sido a primeira aeronave a jato a operar vôos comerciais, o Boeing 707 foi o primeiro a ter grande sucesso de vendas, bem como a primeira aeronave série 7X7.
-Na verdade, a aeronave colocou o jato nos vôos comerciais, e alavancou as vendas da Boeing, ajudando-a a chegar ao posto de maior fabricante de aeronaves do mundo.
-O 707 é um quadrijato, possuindo dois motores sob cada asa. A primeira linha aérea a operá-lo foi a Pan Am, realizando a rota Nova Iorque - Paris, em 26 de outubro de 1958.
-O alcance do Boeing 707 é de aproximadamente 5.700 mn (10659 km), velocidade de cruzeiro de 815 km/h, e a capacidade de passageiros, de até 202 pessoas. O Boeing 737, o Boeing 727 e o Boeing 747 utilizaram muito da tecnologia do seu antecessor, e podem ser consideradas como descendentes diretos dele.
-A primeira operadora no Brasil foi a Varig, que o fez seu principal avião nas rotas internacionais, até a chegada dos DC-10. Também com um 707, a empresa brasileira protagonizou o maior mistério da aviação mundial: em 1979, o PP-VLU decolou de Tokyo com destino a Los Angeles. Desapareceu minutos depois, sem deixar rastros.
+O Boeing 707 foi um aviÃ£o comercial a jato, produzido pela Boeing. AtÃ© a dÃ©cada de 1950, a Boeing era uma fabricante sem muito expressÃ£o, entre as muitas existentes nos Estados Unidos. Era conhecida apenas por suas aeronaves militares, e na verdade, o 707 nasceu como um projeto de nave de reabastecimento, conhecida como KC-135A.
+Embora nÃ£o tenha sido a primeira aeronave a jato a operar vÃ´os comerciais, o Boeing 707 foi o primeiro a ter grande sucesso de vendas, bem como a primeira aeronave sÃ©rie 7X7.
+Na verdade, a aeronave colocou o jato nos vÃ´os comerciais, e alavancou as vendas da Boeing, ajudando-a a chegar ao posto de maior fabricante de aeronaves do mundo.
+O 707 Ã© um quadrijato, possuindo dois motores sob cada asa. A primeira linha aÃ©rea a operÃ¡-lo foi a Pan Am, realizando a rota Nova Iorque - Paris, em 26 de outubro de 1958.
+O alcance do Boeing 707 Ã© de aproximadamente 5.700 mn (10659 km), velocidade de cruzeiro de 815 km/h, e a capacidade de passageiros, de atÃ© 202 pessoas. O Boeing 737, o Boeing 727 e o Boeing 747 utilizaram muito da tecnologia do seu antecessor, e podem ser consideradas como descendentes diretos dele.
+A primeira operadora no Brasil foi a Varig, que o fez seu principal aviÃ£o nas rotas internacionais, atÃ© a chegada dos DC-10. TambÃ©m com um 707, a empresa brasileira protagonizou o maior mistÃ©rio da aviaÃ§Ã£o mundial: em 1979, o PP-VLU decolou de Tokyo com destino a Los Angeles. Desapareceu minutos depois, sem deixar rastros.
 
 FONTE : http://pt.wikipedia.org/wiki/Boeing_707
 
@@ -108,15 +108,15 @@ FONTE : http://pt.wikipedia.org/wiki/Boeing_707
 CHANGELOG
 =========
 
-Versão alpha - 0.0.1 11/10/2009
-		- Primeira versão apresentada.
+VersÃ£o alpha - 0.0.1 11/10/2009
+		- Primeira versÃ£o apresentada.
 
-O Boeing 707-400 < revisão alpha - 0.0.1 11/10/2009 >
+O Boeing 707-400 < revisÃ£o alpha - 0.0.1 11/10/2009 >
 
-Desenvolvido pelo Prestes Hangar. Disponível em  http://presteshangar.blogspot.com ou http://presteshangar.wikidot.com/start
+Desenvolvido pelo Prestes Hangar. DisponÃ­vel em  http://presteshangar.blogspot.com ou http://presteshangar.wikidot.com/start
 
 
-INSTALAÇÃO
+INSTALAÃ‡ÃƒO
 ==========
 
 Descompacte o arquivo .zip usando o programa TUGZip na pasta PASTA_BASE_DO_Flightgear\Data\Aircraft
@@ -131,3 +131,4 @@ Prestes Hangar
  P R E S T E S  H A N G A R  -- http://presteshangar.blogspot.com  --  2009
  
 ---------------------------------------------------------------------------
+Join the chat at https://gitter.im/FGMEMBERS/707-400
