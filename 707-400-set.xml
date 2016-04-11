@@ -205,9 +205,9 @@
 		<!-- O menu de ajuda dessa aeronave -->
 		<help>
 			<title>Boeing 707-400</title>
-			<line>Choose your favorit texture using the key above</line>
-			<line>To start the plane you have to select "Engine Starter" and then when</line>
-			<line>n2 shows 25 you have to select "Engine Start", If you want to cutoff</line>
+			<line>Choose your favorite texture using the key above</line>
+			<line>To start the plane you have to select "Engine Starter" and when</line>
+			<line>N2 shows 25 you have to select "Engine Start", If you want to turn off</line>
 			<line>the engine just select "Engine Start"</line>
 			<key>
 				<name>l</name>
@@ -496,7 +496,7 @@
 					if ( ( node3.getValue() == "nav1-hold" ) and ( node1.getValue() == "speed-with-throttle" ) ) {
 					node2.setValue( "" );
 					node3.setValue( "" );
-					screen.log.write("Captain, altitude e nav1 DISENGAGED!", 1.0,1.0,1.0);
+					screen.log.write("Captain, altitude and nav1 DISENGAGED!", 1.0,1.0,1.0);
 					} elsif ( node1.getValue() == "speed-with-throttle" ) {
 					node1.setValue( "" );
 					node2.setValue( "" );
