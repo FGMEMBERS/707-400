@@ -36,8 +36,8 @@
 		
 		<!-- Definies para splash screen -->
 		<startup>
-			<splash-texture>Aircraft/707-400/splash.png</splash-texture>
-			<splash-texture>Aircraft/707-400/splash1.png</splash-texture>
+			<splash-texture>Aircraft/707-400/Splash/splash.png</splash-texture>
+			<splash-texture>Aircraft/707-400/Splash/splash1.png</splash-texture>
 		</startup>
 
 		<gui>
